@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  AWS Cloud Tech hands on.
+  Auto scaling ec2.
 Parameters:
   ProjectName:
     Type: String
@@ -10,16 +10,16 @@ Parameters:
     Default: "192.168.0.0/16"
   aSubnetCIDR:
     Type: String
-    Default: "192.168.70.0/24"
+    Default: "192.168.1.0/24"
   bSubnetCIDR:
     Type: String
-    Default: "192.168.71.0/24"
+    Default: "192.168.2.0/24"
   aPrivateSubnetCIDR:
     Type: String
-    Default: "192.168.72.0/24"
+    Default: "192.168.3.0/24"
   bPrivateSubnetCIDR:
     Type: String
-    Default: "192.168.73.0/24"
+    Default: "192.168.4.0/24"
   NATGatewayCreate:
     Default: true
     Type: String
@@ -49,7 +49,7 @@ Parameters:
   MyAMI:
     Type: String
     Description: your ami id
-    Default: 'ami-0a0916b3d36543c88'
+    Default: 'ami-0000000000000000'
   DefaultAMI:
     Type: AWS::SSM::Parameter::Value<String>
     Default: "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
